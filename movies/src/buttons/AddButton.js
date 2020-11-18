@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import { movies } from "../movies";
 import movieStore from "../Stores/movieStore";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const AddButton = () => {
   const [name, setName] = useState({
