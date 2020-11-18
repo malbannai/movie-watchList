@@ -1,4 +1,4 @@
-export const movies = [
+export const moviesData = [
   {
     id: 1,
     name: "Lion King",

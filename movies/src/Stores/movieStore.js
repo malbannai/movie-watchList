@@ -1,27 +1,34 @@
-import { movies } from "../movies";
-import { makeObservable, observable, action } from "mobx";
+import { moviesData } from "../movies";
+import { makeObservable, observable, action, computed } from "mobx";
 
 class MovieStore {
-  movies = movies;
+  movies = moviesData;
 
   constructor() {
     makeObservable(this, {
       movies: observable,
-      watch: action,
+      watch: computed,
       finished: action,
+      addmovie: action,
     });
   }
 
-  watch = () => {
-    return movies.filter((movie) => {
+  get watch() {
+    console.log(this.movies);
+    return this.movies.filter((movie) => {
       if (!movie.type) return movie;
+    });
+  }
+
+  finished = () => {
+    return this.movies.filter((movie) => {
+      if (movie.type) return movie;
     });
   };
 
-  finished = () => {
-    return movies.filter((movie) => {
-      if (movie.type) return movie;
-    });
+  addmovie = (newMovie) => {
+    newMovie.id = this.movies[this.movies.length - 1].id + 1;
+    this.movies.push(newMovie);
   };
 }
 
