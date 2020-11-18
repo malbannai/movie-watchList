@@ -1,10 +1,12 @@
 import React from "react";
-import AddButton from "../buttons/AddButton";
 import movieStore from "../Stores/movieStore";
 import { observer } from "mobx-react";
 import MovieItem from "./MovieItem";
 import { useState } from "react";
 import SearchBar from "./SearchBar";
+
+//stylying
+import "../App.css";
 
 const Watchlist = () => {
   const list = movieStore.watch;
@@ -15,11 +17,11 @@ const Watchlist = () => {
     .map((movie) => <MovieItem movie={movie} />);
 
   return (
-    <>
+    <div className="containter-List">
       <SearchBar setQuery={setQuery} />
       <h2>Watchlist {list.length}</h2>
       <div>{search}</div>
-    </>
+    </div>
   );
 };
 

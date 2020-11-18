@@ -7,8 +7,10 @@ function App() {
   return (
     <div className="App">
       <AddButton />
-      <Watchlist />
-      <Watchedlist />
+      <div className="containter">
+        <Watchlist />
+        <Watchedlist />
+      </div>
     </div>
   );
 }

@@ -24,6 +24,7 @@ const AddButton = () => {
         name="name"
         onChange={handleChange}
         type="text"
+        placeholder="Add your movie.."
         className="form-control"
       />
       <button

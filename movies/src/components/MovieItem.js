@@ -6,8 +6,10 @@ const MovieItem = ({ movie }) => {
   return (
     <div>
       <h1>{movie.name}</h1>
-      <WatchedButton movie={movie} />
-      <DeleteButton movie={movie} />
+      <div className="containter">
+        <WatchedButton movie={movie} />
+        <DeleteButton movie={movie} />
+      </div>
     </div>
   );
 };

@@ -1,3 +1,49 @@
 .App {
   text-align: center;
 }
+
+.containter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containter-List {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10%;
+}
+
+.delete-btn {
+  color: rgb(68, 67, 67);
+  padding: 10px;
+  background-color: rgb(245, 137, 137);
+  border-radius: 8px;
+  margin: 0.5%;
+}
+
+.delete-btn:hover {
+  color: whitesmoke;
+  padding: 10px;
+  background-color: red;
+  border-radius: 8px;
+  margin: 0.5%;
+}
+
+.watch-btn {
+  color: rgb(68, 67, 67);
+  padding: 10px;
+  background-color: rgb(202, 229, 160);
+  border-radius: 8px;
+  margin: 0.5%;
+}
+
+.watch-btn:hover {
+  color: rgb(68, 67, 67);
+  padding: 20px;
+  background-color: rgb(202, 229, 160);
+  border-radius: 8px;
+  margin: 0.5%;
+}

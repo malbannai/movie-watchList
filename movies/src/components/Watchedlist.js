@@ -5,6 +5,9 @@ import SearchBar from "./SearchBar";
 import { useState } from "react";
 import MovieItem from "./MovieItem";
 
+//stylying
+import "../App.css";
+
 const Watchedlist = () => {
   const list = movieStore.finished;
 
@@ -13,11 +16,11 @@ const Watchedlist = () => {
     .filter((movie) => movie.name.toLowerCase().includes(query.toLowerCase()))
     .map((movie) => <MovieItem movie={movie} />);
   return (
-    <>
+    <div className="containter-List">
       <SearchBar setQuery={setQuery} />
       <h2>-Watchedlist- {list.length}</h2>
       <div> {search}</div>
-    </>
+    </div>
   );
 };
 
