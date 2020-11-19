@@ -6,6 +6,7 @@ import AddButton from "./buttons/AddButton";
 function App() {
   return (
     <div className="App">
+      <h1 className="title">Welcome to Desiny Movies List</h1>
       <AddButton />
       <div className="containter">
         <Watchlist />

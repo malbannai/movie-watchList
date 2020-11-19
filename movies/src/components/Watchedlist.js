@@ -18,7 +18,9 @@ const Watchedlist = () => {
   return (
     <div className="containter-List">
       <SearchBar setQuery={setQuery} />
-      <h2>-Watchedlist- {list.length}</h2>
+      <h2>
+        Watchedlist <span className="counter"> -{list.length}-</span>
+      </h2>
       <div> {search}</div>
     </div>
   );

@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  height: 100vh;
+  background-color: rgb(172, 209, 240);
 }
 
 .containter {
@@ -46,4 +48,38 @@
   background-color: rgb(202, 229, 160);
   border-radius: 8px;
   margin: 0.5%;
+}
+
+.counter {
+  background-color: rgb(245, 137, 137);
+  border-radius: 50%;
+  width: 10px;
+}
+
+.search-bar {
+  margin: 20px;
+  border-radius: 5px;
+  border-color: rgb(68, 67, 67);
+  width: 250px;
+  padding: 8px;
+}
+
+.nav-bar {
+  background-color: rgb(105, 141, 247);
+}
+
+.title {
+  color: white;
+  background-color: rgb(105, 141, 247);
+  margin: 0;
+}
+
+.add-input {
+  width: 50%;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 20px;
+}
+
+.button-color {
 }

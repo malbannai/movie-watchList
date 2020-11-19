@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import movieStore from "../Stores/movieStore";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "../App.css";
 
 const AddButton = () => {
   const [name, setName] = useState({
@@ -14,23 +15,20 @@ const AddButton = () => {
     setName({ ...name, [event.target.name]: event.target.value });
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = () => {
     movieStore.addmovie(name);
     console.log(name);
   };
   return (
-    <div>
+    <div className="nav-bar">
       <input
         name="name"
         onChange={handleChange}
         type="text"
         placeholder="Add your movie.."
-        className="form-control"
+        className="add-input"
       />
-      <button
-        class="btn btn-outline-success my-1 my-sm-3"
-        onClick={handleSubmit}
-      >
+      <button class="btn btn-warning my-1 my-sm-3" onClick={handleSubmit}>
         Add
       </button>
     </div>
